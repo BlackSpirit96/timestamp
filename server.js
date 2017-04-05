@@ -4,7 +4,7 @@ var app = express();
 var port = 8080;
 
 app.get('/', function (req, res) {
-  res.send('Hello Timestamp!');
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/:timestamp', function(req, res) {
@@ -25,5 +25,5 @@ app.get('/:timestamp', function(req, res) {
 });
 
 app.listen(port, function () {
-  console.log('Example app listening on port 8080!');
+  console.log('Timestamp app listening on port ' + port + '!');
 });
